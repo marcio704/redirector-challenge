@@ -1,1 +1,4 @@
 .idea/
+/static
+db.sqlite*
+**/.pytest_cache/

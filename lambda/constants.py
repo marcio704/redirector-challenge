@@ -1,0 +1,4 @@
+DATE_FORMAT = '%Y-%m-%d %H:%M:%S%z'
+
+DOMAIN_POOL_ID_FIELD = 'domain_pool_id'
+QUERYSTRING_BLACKLIST = (DOMAIN_POOL_ID_FIELD,)

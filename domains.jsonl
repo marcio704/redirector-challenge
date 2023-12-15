@@ -1,0 +1,29 @@
+{"domain_pool_id": 1, "domain_name": "http://test1.test1.com", "domain_weight": 1}
+{"domain_pool_id": 1, "domain_name": "http://test2.test1.com", "domain_weight": 2}
+{"domain_pool_id": 2, "domain_name": "http://test1.test2.com", "domain_weight": 2}
+{"domain_pool_id": 2, "domain_name": "http://test2.test2.com", "domain_weight": 1}
+{"domain_pool_id": 2, "domain_name": "http://test3.test2.com", "domain_weight": 1}
+
+{"domain_pool_id": 1, "domain_name": "domain1.com.br", "domain_weight": 1}
+
+{"domain_pool_id": 1, "domain_name": "domain2.com.br", "domain_weight": 2}
+
+{"domain_pool_id": 2, "domain_name": "domain3.com.br", "domain_weight": 1}
+
+{"domain_pool_id": 2, "domain_name": "domain4.com.br", "domain_weight": 2}
+
+{"domain_pool_id": 1, "domain_name": "domain1.com.br", "domain_weight": 1}
+
+{"domain_pool_id": 1, "domain_name": "domain2.com.br", "domain_weight": 2}
+
+{"domain_pool_id": 2, "domain_name": "domain3.com.br", "domain_weight": 1}
+
+{"domain_pool_id": 2, "domain_name": "domain4.com.br", "domain_weight": 2}
+
+{"domain_pool_id": 1, "domain_name": "domain1.com.br", "domain_weight": 1}
+
+{"domain_pool_id": 1, "domain_name": "domain2.com.br", "domain_weight": 2}
+
+{"domain_pool_id": 2, "domain_name": "domain3.com.br", "domain_weight": 1}
+
+{"domain_pool_id": 2, "domain_name": "domain4.com.br", "domain_weight": 2}

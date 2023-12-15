@@ -21,19 +21,32 @@ Create a performant service that allows for redirecting incoming HTTP traffic to
 
 # Running locally
 
-## Django Backend
- - Set home directory as `cd <PROJECT_PATH>`
- - `pipenv install && pipenv shell`
- - `python manage.py runserver`
+### Django Backend
+ - `make backend-install`
+ - `make backend-migrate`
+ - `make backend-run`
 
-## Flask redirector service
- - Set home directory as `cd <PROJECT_PATH>/lambda`
- - `pipenv install && pipenv shell`
- - `export FLASK_APP=views FLASK_ENV=development STAGE=local`
- - `flask run`
+For admin access to create new Domains:
+ - `make backend-createsuperuser`
+
+Access admin on http://127.0.0.1:8000/admin/
+
+Everytime you add/edit a Domain, it will save the record on a local `domains.jsonl` file used by the Flask microservice.
+This is for the sake of a simpler local environment.
+
+### Flask redirector Lambda microservice
+ - `make lambda-install`
+ - `make lambda-run`
+
+Access it on http://127.0.0.1:5000/
+
+Request example: http://127.0.0.1:5000/my/path?test=123&domain_pool_id=1
+
+This will seek for domain records in the local `domains.jsonl`.
 
 # Tests
- - `make test`
+ - `make backend-test`
+ - `make lambda-test`
 
 # Releases
  - Staging: merge your PR to branch `master`, this will trigger the Staging CI pipeline
