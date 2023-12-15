@@ -40,11 +40,11 @@ def redirector(path):
     if not domain_pool_id:
         abort(400, "Param domain_pool_id not provided in the URL")
 
-    tracking_data = get_tracking_data_from_request(request)
     querystring = clean_querystring(request.query_string.decode())
     uri = f'{path}?{querystring}'
     domain = get_suitable_domain(int(domain_pool_id))
     redirect_url = f"{domain}/{uri}"
+    tracking_data = get_tracking_data_from_request(request, domain)
 
     logger.info(f'Saving tracking_data for {redirect_url}: {tracking_data}')
     save_tracking_data(tracking_data)

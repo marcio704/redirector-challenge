@@ -28,12 +28,13 @@ def get_request_referer(request: Request) -> str:
     return request.headers.get('Referer', '')
 
 
-def get_tracking_data_from_request(request: Request) -> dict:
+def get_tracking_data_from_request(request: Request, domain_name: str) -> dict:
     return {
-        'referer': get_request_referer(request),
+        'domain_name': domain_name,
         'user_agent': get_user_agent(request),
+        'referer': get_request_referer(request),
         'ip': get_client_ip(request),
-        'created_at': datetime.now(tz=pytz.UTC).strftime(DATE_FORMAT),
+        'redirect_date': datetime.now(tz=pytz.UTC).strftime(DATE_FORMAT),
     }
 
 

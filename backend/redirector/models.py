@@ -32,3 +32,5 @@ class DomainRedirect(Timestampable, models.Model):
     domain = models.ForeignKey(Domain, related_name="redirects", on_delete=models.CASCADE)
     user_agent = models.TextField(null=True, blank=True)
     referer = models.TextField(null=True, blank=True)
+    ip = models.TextField(null=True, blank=True)
+    redirect_date = models.DateTimeField()
