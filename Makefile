@@ -30,7 +30,6 @@ lambda-install:
 lambda-run:
 	cd lambda && pipenv run flask --app views run
 
-
 .PHONY: lambda-tests
 lambda-tests: backend-install
 	cd lambda && pipenv run python3 -m pytest tests.py

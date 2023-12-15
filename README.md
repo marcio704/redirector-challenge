@@ -45,8 +45,8 @@ Request example: http://127.0.0.1:5000/my/path?test=123&domain_pool_id=1
 This will seek for domain records in the local `domains.jsonl`.
 
 # Tests
- - `make backend-test`
- - `make lambda-test`
+ - `make backend-tests`
+ - `make lambda-tests`
 
 # Releases
  - Staging: merge your PR to branch `master`, this will trigger the Staging CI pipeline

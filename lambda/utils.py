@@ -11,7 +11,7 @@ from urllib.parse import parse_qs, urlencode
 from flask import request as Request
 
 from .constants import DATE_FORMAT, QUERYSTRING_BLACKLIST
-
+from .decorators import timeit
 
 logger = logging.getLogger(__name__)
 
@@ -38,6 +38,7 @@ def get_tracking_data_from_request(request: Request, domain_name: str) -> dict:
     }
 
 
+@timeit
 def save_tracking_data(tracking_data: dict) -> None:
     """
     This would save the tracking_data on a distributed DynamoDB which would trigger an async event to a global SQS queue
@@ -88,6 +89,7 @@ def get_domain_randomly(domains: Iterator) -> str:
     return random.choice(domains_list)
 
 
+@timeit
 def get_suitable_domain(domain_pool_id: int):
     domains = get_available_domains_for_pool(domain_pool_id)
     return get_domain_randomly(domains)
